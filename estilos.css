@@ -1,0 +1,63 @@
+ :root {
+  --principal: #17365d;
+  --secundario: #2f75b5;
+  --fondo: #f4f7fb;
+  --texto: #202938;
+  --blanco: #ffffff;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: var(--texto);
+  background: var(--fondo);
+  line-height: 1.6;
+}
+.encabezado {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 7%;
+  background: var(--blanco);
+  border-bottom: 1px solid #dce3ec;
+}
+.logo { color: var(--principal); font-weight: 700; text-decoration: none; }
+nav { display: flex; flex-wrap: wrap; gap: 1rem; }
+nav a { color: var(--principal); text-decoration: none; font-weight: 600; }
+nav a:hover, nav a:focus { color: var(--secundario); text-decoration: underline; }
+.hero {
+  padding: 5rem 7%;
+  color: var(--blanco);
+  background: linear-gradient(120deg, var(--principal), var(--secundario));
+}
+.hero h1 { max-width: 750px; margin: .3rem 0; font-size: clamp(2.2rem, 6vw, 4rem); }
+.hero p { max-width: 650px; }
+.etiqueta { text-transform: uppercase; letter-spacing: .12em; font-size: .85rem; }
+.boton {
+  display: inline-block; margin-top: 1rem; padding: .75rem 1.1rem;
+  color: var(--principal); background: var(--blanco); border-radius: .5rem;
+  text-decoration: none; font-weight: 700;
+}
+.boton:hover, .boton:focus { background: #e8eef6; }
+.seccion { padding: 3rem 7%; }
+.seccion h2 { color: var(--principal); font-size: 2rem; }
+.rejilla { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
+.tarjeta {
+  padding: 1.3rem; background: var(--blanco); border: 1px solid #dce3ec;
+  border-radius: .8rem; box-shadow: 0 4px 14px rgba(20, 40, 70, .06);
+}
+.tarjeta h3 { color: var(--principal); }
+.numero { color: var(--secundario); font-weight: 700; }
+.habilidades { display: flex; flex-wrap: wrap; gap: .8rem; padding: 0; list-style: none; }
+.habilidades li { padding: .6rem .9rem; background: var(--blanco); border-radius: 2rem; }
+.contacto { background: #eaf0f7; }
+.contacto a { color: var(--principal); }
+.nota { color: #596579; font-size: .9rem; }
+footer { padding: 1.2rem 7%; color: var(--blanco); background: var(--principal); text-align: center; }
+@media (max-width: 800px) {
+  .encabezado { align-items: flex-start; flex-direction: column; }
+  .rejilla { grid-template-columns: 1fr; }
+  .hero { padding-top: 3.5rem; padding-bottom: 3.5rem; }
+}
